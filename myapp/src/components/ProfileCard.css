@@ -1,0 +1,53 @@
+.profile-card {
+  width: 360px;
+  border: 1px solid #e6e8ec;
+  border-radius: 14px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  grid-template-rows: auto auto;
+  grid-column-gap: 14px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.avatar {
+  grid-row: 1 / span 2;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.info { align-self: center; }
+.name { margin: 0; font-size: 20px; }
+.meta { margin: 4px 0 8px; color: #6b7280; font-size: 14px; }
+.message { margin: 0 0 12px; font-size: 14px; color: #374151; }
+
+.like-btn {
+  grid-column: 1 / span 2;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #22c55e;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .05s ease, filter .15s ease;
+}
+.like-btn:active { transform: translateY(1px); }
+.like-btn:hover { filter: brightness(0.95); }
+
+.like-count {
+  grid-column: 1 / span 2;
+  margin-top: 8px;
+  color: #6b7280;
+  font-size: 13px;
+}

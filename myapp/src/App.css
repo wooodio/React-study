@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.container {max-width: 800px; margin: 0 auto; padding: 24px;}
+.header {border-bottom: 1px solid #eee; margin-bottom: 16px;}
+.card {border: 1px solid #ddd; border-radius: 12px; padding: 16px;}
+.footer {margin-top: 24px; color: #f87171; font-size: 14px;}
+button { border: 1px solid #ddd; padding: 10px 16px; border-radius: 6px; cursor: pointer;}
+input {padding: 8px; border: 1px solid #ccc; border-radius: 6px; width: 100%; box-sizing: border-box;}

@@ -1,15 +1,25 @@
 import React from 'react';
-import ProfileCard from './ProfileCard';
+import ProfileCard from './components/ProfileCard';
+import Counter from './components/counter';
+import LikeToggle from './components/LikeToggle';
+import Footer from './components/Footer';
+import Header from './components/header';
+import Greeter from './components/Greeter';
+import './App.css';
 
 function App() {
   return (
-    <div style={{ padding: 24 }}>
+    <div className='container'>
+      <Header/>
+      <Greeter/>
       <ProfileCard
         name="우정균"
-        studentId="2022108145"
         major="인공지능학과"
-        message="안녕하세요! React 컴포넌트를 배우고 있는 우정균입니다."
+        interests={['축구', '농구', '코딩']}
       />
+      <Counter/>
+      <LikeToggle/>
+      <Footer/>
     </div>
   );
 }

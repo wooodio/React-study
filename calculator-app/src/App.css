@@ -1,0 +1,117 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* 결과 화면 스타일 */
+.display {
+  height: 50px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  min-height: 50px;
+  word-break: break-all;
+}
+
+/* CSS Grid를 활용한 레이아웃 */
+.keypad {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  gap: 8px;
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.operators {
+  display: grid;
+  grid-auto-rows: 56px;
+  gap: 8px;
+}
+
+/* 버튼 공통 스타일 */
+.btn {
+  width: 100%;
+  height: 56px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+
+.btn:active {
+  background-color: #e0e0e0;
+}
+
+/* 연산자 버튼 스타일 */
+.operators .btn {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.operators .btn:hover {
+  background-color: #0056b3;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
