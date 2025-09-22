@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dev-debug.log
+
+# taskmaster
+.taskmaster/
+.env.example
+.github/
+
+#pdf
+app_2주차_1_강의자료.pdf
+app_2주차_2_강의자료.pdf
+app_3주차_1_강의자료.pdf
+app_programming_week3_session2_react_calculator.pdf
+
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS specific
+.DS_Store

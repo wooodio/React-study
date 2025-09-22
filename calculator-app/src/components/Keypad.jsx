@@ -2,9 +2,9 @@ import Button from './Button';
 
 export default function Keypad({ onKey }) { // props로 onKey 함수를 받음
   // 숫자 버튼 배열 정의 - JavaScript 배열
-  const numbers = ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0", ".", "C"];
+  const numbers = ["7", "8", "9", "4", "5", "6", "1", "2", "3", "C","0", "."];
   // 연산자 버튼 배열 정의
-  const operators = ["+", "-", "*", "/", "="];
+  const operators = ["+", "-", "*", "/", "%", "="];
   
   return (
     // JSX Fragment 대신 div로 감싸기 (JSX는 하나의 부모 요소가 필요)

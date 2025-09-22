@@ -37,9 +37,10 @@
   }
 }
 
-.container {max-width: 800px; margin: 0 auto; padding: 24px;}
+.container {max-width: 300px; margin: 0 auto; text-align: center;}
+.display {height:50px; border:1px solid #ccc; margin-bottom: 8px; font-size: 24px;}
 .header {border-bottom: 1px solid #eee; margin-bottom: 16px;}
 .card {border: 1px solid #ddd; border-radius: 12px; padding: 16px;}
 .footer {margin-top: 24px; color: #f87171; font-size: 14px;}
-button { border: 1px solid #ddd; padding: 10px 16px; border-radius: 6px; cursor: pointer;}
+.btn { width:60px; height:60px; margin: 4px; font-size: 20px;}
 input {padding: 8px; border: 1px solid #ccc; border-radius: 6px; width: 100%; box-sizing: border-box;}
