@@ -3,7 +3,7 @@ export default function History({ records, onClearHistory }) {
     <div className="history-section">
       <div className="history-header">
         <h3>계산 기록</h3>
-        {/* 🆕 과제: 기록 초기화 버튼 추가 */}
+        
         {records.length > 0 && (
           <button 
             className="clear-history-btn"

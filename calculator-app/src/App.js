@@ -16,12 +16,12 @@ function App() {
   // 초기값은 빈 배열([])
   const [history, setHistory] = useState([]);
 
-  // 🆕 과제: 기록 초기화 함수
+  // 기록 초기화 함수
   const clearHistory = () => {
     setHistory([]); // 기록 배열을 빈 배열로 초기화
   };
 
-  // 🆕 과제: 소수점 연산 정확도 개선 함수
+  // 소수점 연산 정확도 개선 함수
   const fixFloatingPoint = (num) => {
     // JavaScript의 부동소수점 연산 오류를 수정
     // 예: 0.1 + 0.2 = 0.30000000000000004 → 0.3
@@ -37,7 +37,7 @@ function App() {
       return; // 함수 실행 종료
     }
 
-    // 🆕 과제: % 연산자 처리 추가
+    //% 연산자 처리 추가
     if (value === "%") {
       // % 연산자를 입력에 추가
       setInput(prev => prev + "%");
@@ -46,10 +46,10 @@ function App() {
 
     // = 버튼 처리 (계산 실행)
     if (value === "=") {
-      if (!input.trim()) return; // 🆕 개선: 빈 입력값 무시
+      if (!input.trim()) return; //  빈 입력값 무시
       
       try {
-        // 🆕 과제: % 연산 처리
+        //  % 연산 처리
         let expression = input;
         
         // % 를 JavaScript의 나머지 연산자로 그대로 사용
@@ -58,12 +58,12 @@ function App() {
         // eval() 함수로 문자열 수식을 계산 (학습용으로만 사용, 실무에서는 보안상 위험)
         let result = eval(expression);
         
-        // 🆕 과제: 소수점 정확도 개선 적용
+        // 소수점 정확도 개선 적용
         result = fixFloatingPoint(result);
         
         const resultString = result.toString(); // 결과를 문자열로 변환
         
-        // 🆕 과제: 계산 기록을 history 배열에 추가 (최근 5개만 유지)
+        // 계산 기록을 history 배열에 추가 (최근 5개만 유지)
         // 함수형 업데이트: 이전 상태(prev)를 받아 새로운 상태 반환
         // 스프레드 연산자(...)로 기존 배열을 펼치고 새 기록을 맨 앞에 추가
         // slice(0, 5)로 최근 5개 기록만 유지
@@ -83,7 +83,7 @@ function App() {
     setInput(prev => prev + value);
   };
 
-  // 🆕 과제: 키보드 입력 지원 추가
+  // 키보드 입력 지원 추가
   // useEffect Hook: 컴포넌트가 마운트된 후 실행되는 부수 효과(side effect) 처리
   useEffect(() => {
     // 키보드 이벤트 처리 함수
@@ -126,7 +126,6 @@ function App() {
       {/* HTML h1 태그와 동일하지만 JSX 문법 */}
       <h1>React 계산기</h1>
       
-      {/* 🆕 과제: 키보드 사용법 안내 */}
       <div style={{
         fontSize: "12px", 
         color: "#666", 
@@ -138,14 +137,15 @@ function App() {
        
       </div>
       
+
       {/* Display 컴포넌트에 value prop으로 현재 input 상태값 전달 */}
       <Display value={input || "0"} />
-      
+      {/* History 컴포넌트에 기록 초기화 함수도 함께 전달 */}
+      <History records={history} onClearHistory={clearHistory} />
       {/* Keypad 컴포넌트에 onKey prop으로 handleClick 함수 전달 */}
       <Keypad onKey={handleClick} />
       
-      {/* 🆕 과제: History 컴포넌트에 기록 초기화 함수도 함께 전달 */}
-      <History records={history} onClearHistory={clearHistory} />
+
       
       {/* 조건부 렌더링 - && 연산자 사용 */}
       {/* input이 "Error"일 때만 오류 메시지 표시 */}
