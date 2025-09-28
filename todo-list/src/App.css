@@ -60,3 +60,58 @@ color: white;
 border: none;
 cursor: pointer;
 }
+
+/* 우선순위 관련 스타일 */
+.priority-select {
+margin: 0 8px;
+padding: 4px 8px;
+border: 1px solid #ddd;
+border-radius: 4px;
+font-size: 14px;
+}
+
+/* 우선순위별 할 일 항목 색상 */
+.high-priority {
+border-left: 4px solid #ff6b6b;
+background: #fff5f5;
+}
+
+.medium-priority {
+border-left: 4px solid #feca57;
+background: #fffbf0;
+}
+
+.low-priority {
+border-left: 4px solid #a0a0a0;
+background: #f8f9fa;
+}
+
+/* 우선순위 배지 스타일 */
+.priority-badge {
+margin-left: auto;
+margin-right: 8px;
+padding: 2px 8px;
+border-radius: 12px;
+font-size: 12px;
+font-weight: bold;
+}
+
+.high-badge {
+background: #ff6b6b;
+color: white;
+}
+
+.medium-badge {
+background: #feca57;
+color: #333;
+}
+
+.low-badge {
+background: #a0a0a0;
+color: white;
+}
+
+.todo-text {
+flex: 1;
+margin-left: 8px;
+}
